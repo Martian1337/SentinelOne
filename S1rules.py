@@ -22,7 +22,7 @@ def create_rule(domain):
         "local_port_type": "any",
         "location_ids": [],
         "location_type": "all",
-        "name": f"block {domain} ITS-114",
+        "name": f"block {domain}",
         "os_types": ["osx", "windows"],
         "profile": "any",
         "protocol": None,
