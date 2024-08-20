@@ -40,17 +40,14 @@ def create_rule(domain):
     }
 
 def main():
-    # Read domains from file
+    # Read domains from file and Generate rules for each domain
     domains = read_domains(domains_file_path)
-    
-    # Generate rules for each domain
     rules = [create_rule(domain) for domain in domains]
 
-    # Convert to JSON and print or save to file
+    # Convert to JSON and print or save
     rules_json = json.dumps(rules, indent=4)
     print(rules_json)
 
-    # Optionally save to a file
     with open('rules.json', 'w') as f:
         f.write(rules_json)
 
